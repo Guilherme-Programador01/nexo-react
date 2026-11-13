@@ -1,0 +1,19 @@
+/* Componentes de conteúdo com hierarquia simples e sem sombras decorativas. */
+.cartao, .vaga, .vazio, .cartao-curriculo, .cartao-candidato, .cartao-etapa, .cartao-detalhe, .cartao-candidatura, .resumo > div {
+  background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: var(--raio); box-shadow: none;
+}
+.cartao, .vaga, .cartao-curriculo, .cartao-candidato, .cartao-etapa { padding: 18px; }
+.vaga:hover { border-color: var(--cor-principal); box-shadow: none; }
+.vazio { padding: 28px; text-align: center; }
+.lista-etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.etiqueta { display: inline-block; padding: 4px 9px; color: var(--cor-principal-escura); background: var(--cor-destaque-clara); border-radius: 5px; font-size: 11px; font-weight: 600; }
+.empresa-logo, .avatar { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 42px; height: 42px; color: var(--cor-principal-escura); background: var(--cor-principal-clara); border-radius: 9px; font-weight: 800; }
+.empresa-logo.grande { width: 56px; height: 56px; font-size: 18px; }
+.avatar { border-radius: 50%; }
+.dados-candidato { display: flex; align-items: center; gap: 12px; h2, h3 { margin: 0; font-size: 17px; } p { margin: 0; } }
+.resumo { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px;
+  > div { display: flex; flex-direction: column; padding: 17px; border-top: 3px solid var(--cor-principal); }
+  > div:nth-child(2n) { border-top-color: var(--cor-verde); }
+  strong { color: var(--cor-principal-escura); font-family: "Manrope", sans-serif; font-size: 27px; line-height: 1.2; }
+  span { margin-top: 5px; color: var(--cor-texto-suave); font-size: 12px; }
+}

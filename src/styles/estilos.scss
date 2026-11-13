@@ -1,0 +1,26 @@
+/* =========================================================
+   NEXO | Estilos globais
+   Este arquivo só junta as partes. Cada parte fica em um arquivo:
+
+   variaveis   -> cores, tamanhos e sombras (variáveis CSS)
+   base        -> reset, tipografia, links
+   layout      -> container, páginas, faixa de título das páginas
+   logo        -> logotipo (menu lateral e rodapé)
+   botoes      -> todos os tipos de botão
+   formularios -> campos, formulários, mensagens de erro
+   cartoes     -> cartões, etiquetas e avatar
+   secoes      -> blocos que se repetem (etapas, chamada final)
+   painel      -> telas de painel (candidato e empresa)
+
+   Estilos que só existem em uma tela ficam no style.scss da própria
+   página ou componente.
+   ========================================================= */
+@use 'variaveis';
+@use 'base';
+@use 'layout';
+@use 'logo';
+@use 'botoes';
+@use 'formularios';
+@use 'cartoes';
+@use 'secoes';
+@use 'painel';

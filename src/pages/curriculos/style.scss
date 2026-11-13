@@ -1,0 +1,57 @@
+
+.filtros {
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) minmax(150px, 1fr) minmax(140px, 1fr) auto;
+  gap: 12px;
+  margin-bottom: 8px;
+  align-items: end;
+}
+.filtros .botao { white-space: nowrap; }
+@media (max-width: 760px) {
+  .filtros { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .filtros { grid-template-columns: 1fr; }
+}
+
+.resultados {
+  margin: 8px 0 14px;
+  font-size: 14px;
+}
+
+.lista-curriculos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+
+.cartao-curriculo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detalhe-curriculo {
+  strong {
+    font-size: 13px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.cartao-curriculo .email {
+  margin: 0;
+  font-size: 13px;
+}
+
+.compativel {
+  align-self: flex-start;
+  padding: 3px 9px;
+  color: var(--cor-principal-escura);
+  background: var(--cor-destaque-clara);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}

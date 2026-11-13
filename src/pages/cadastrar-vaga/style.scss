@@ -1,0 +1,38 @@
+/* Página para publicar uma vaga. */
+.titulo-formulario {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--cor-borda);
+
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
+.campos-formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  label {
+    display: flex;
+    flex: 1 1 280px;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--cor-texto);
+  }
+
+  .largura-total {
+    flex-basis: 100%;
+  }
+}
+
+.acoes-formulario {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

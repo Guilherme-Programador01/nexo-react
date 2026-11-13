@@ -1,0 +1,20 @@
+.card-vaga {
+  display: flex; flex-direction: column; min-height: 250px; padding: 21px;
+  border-radius: 13px; transition: border-color .18s ease, transform .18s ease;
+  &:hover { border-color: var(--cor-principal); transform: translateY(-2px); }
+}
+.vaga-topo { display: flex; align-items: flex-start; gap: 13px; }
+.vaga-titulo { flex: 1; min-width: 0;
+  h3 { margin: 6px 0 3px; font-size: 17px; line-height: 1.35; }
+  p { margin: 0; font-size: 13px; }
+}
+.tipo-vaga { color: #168653; font-size: 9px; font-weight: 800; letter-spacing: .8px; }
+.tipo-demo { color: #87621d; }
+.vaga-detalhes { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; color: var(--cor-texto-suave); font-size: 12px;
+  span { padding: 5px 8px; background: #f6f4fa; border-radius: 5px; }
+}
+.vaga-rodape { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--cor-borda);
+  small { display: block; margin-bottom: 3px; font-size: 11px; color: var(--cor-texto-suave); }
+  strong { color: var(--cor-verde-escura); font-size: 14px; }
+  .botao { min-height: 36px; padding: 7px 12px; font-size: 12px; }
+}

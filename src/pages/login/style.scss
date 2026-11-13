@@ -1,0 +1,124 @@
+/* Login: usa .pagina-acesso e .formulario do arquivo global (_formularios.scss).
+   Aqui ficam só os detalhes do login. */
+.formulario {
+  .subtitulo {
+    margin-bottom: 0;
+  }
+
+  /* Campos: erro (vermelho) e certo (verde). O foco já fica roxo no CSS global. */
+  input {
+    &.campo-erro {
+      background: var(--cor-erro-fundo);
+      border-color: var(--cor-erro);
+    }
+
+    &.campo-ok {
+      border-color: var(--cor-verde);
+    }
+  }
+
+  label.lembrar {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+
+    input {
+      width: 18px;
+      min-height: 18px;
+      accent-color: var(--cor-principal);
+    }
+  }
+}
+
+/* Abas candidato / empresa */
+.login-abas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  background: var(--cor-creme);
+  border-radius: 12px;
+
+  button {
+    padding: 10px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cor-texto-suave);
+    background: transparent;
+    border: 0;
+    border-radius: 9px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .aba-ativa {
+    color: var(--cor-principal-escura);
+    background: #fff;
+    box-shadow: none;
+  }
+}
+
+.mensagem-campo {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--cor-erro);
+}
+
+/* Senha com botão Mostrar/Ocultar dentro do campo */
+.campo-senha {
+  position: relative;
+
+  input {
+    padding-right: 84px;
+  }
+}
+
+.botao-olho {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cor-principal);
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  transform: translateY(-50%);
+
+  &:hover {
+    background: var(--cor-principal-clara);
+  }
+}
+
+/* Lembrar-me + Esqueceu a senha */
+.login-opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+
+/* Spinner do botão (carregando) */
+.spinner {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: girar 0.7s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2s;
+  }
+}

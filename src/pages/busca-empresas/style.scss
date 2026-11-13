@@ -1,0 +1,103 @@
+.filtros-empresas,
+.cartao-empresa-busca {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.filtros-empresas {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr auto;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 20px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.contagem-empresas {
+  margin: 18px 0;
+  color: var(--cor-texto-suave);
+}
+
+.lista-empresas {
+  display: grid;
+  gap: 12px;
+}
+
+.cartao-empresa-busca {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+
+  .marca-empresa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 48px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--cor-principal);
+    border-radius: 14px;
+  }
+
+  .dados-empresa {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+  }
+
+  p {
+    margin: 0 0 5px;
+  }
+
+  span {
+    font-size: 13px;
+    color: var(--cor-texto-suave);
+  }
+
+  .descricao-empresa {
+    margin-top: 10px;
+  }
+
+  a {
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 800px) {
+  .filtros-empresas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .filtros-empresas {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-empresa-busca {
+    flex-wrap: wrap;
+  }
+}

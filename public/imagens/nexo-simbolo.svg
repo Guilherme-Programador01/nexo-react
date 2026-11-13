@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Símbolo Nexo</title>
+  <defs>
+    <linearGradient id="fundo" x1="7" y1="5" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A855F7"/>
+      <stop offset=".52" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#4C1D95"/>
+    </linearGradient>
+    <linearGradient id="traco" x1="15" y1="16" x2="49" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9D5FF"/>
+    </linearGradient>
+    <filter id="sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#fundo)"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="17.25" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="1.5"/>
+  <g filter="url(#sombra)" stroke="url(#traco)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 45V19L47 45V19"/>
+    <path d="M17 19H25" stroke-opacity=".92"/>
+    <path d="M39 45H47" stroke-opacity=".92"/>
+  </g>
+  <circle cx="17" cy="19" r="4" fill="#FFFFFF"/>
+  <circle cx="47" cy="45" r="4" fill="#DDD6FE"/>
+</svg>

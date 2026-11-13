@@ -1,0 +1,111 @@
+/* Todos os botões e links com cara de botão. */
+.botao,
+.botao-principal,
+.botao-claro,
+.botao-borda,
+.botao-link,
+.botao-secundario,
+.botao-perigo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+/* Botão claro (padrão) */
+.botao,
+.botao-claro,
+.botao-borda,
+.botao-secundario {
+  color: var(--cor-texto);
+  background: var(--cor-superficie);
+
+  &:hover {
+    color: var(--cor-principal-escura);
+    border-color: var(--cor-principal);
+    background: var(--cor-principal-clara);
+  }
+}
+
+/* Botão roxo (ação principal) */
+.botao-principal {
+  color: #fff;
+  background: var(--cor-principal);
+  border-color: var(--cor-principal);
+
+  &:hover {
+    color: #fff;
+    background: var(--cor-principal-escura);
+    border-color: var(--cor-principal-escura);
+  }
+}
+
+/* Link com borda neutra */
+.botao-link {
+  color: var(--cor-destaque);
+  background: transparent;
+  border-color: var(--cor-borda-forte);
+
+  &:hover {
+    color: var(--cor-principal-escura);
+    background: var(--cor-principal-clara);
+  }
+}
+
+/* Ações que apagam algo */
+.botao-perigo {
+  color: var(--cor-erro);
+  background: var(--cor-superficie);
+  border-color: rgba(180, 35, 24, 0.35);
+
+  &:hover {
+    background: var(--cor-erro-fundo);
+  }
+}
+
+.botao-pequeno {
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.botao-grande {
+  min-height: 46px;
+  padding: 11px 20px;
+}
+
+.largura-total {
+  width: 100%;
+}
+
+/* Botão verde (candidatar-se, salvar, ações positivas) */
+.botao-verde {
+  color: #fff;
+  background: var(--cor-verde);
+  border-color: var(--cor-verde);
+
+  &:hover {
+    color: #fff;
+    background: var(--cor-verde-escura);
+    border-color: var(--cor-verde-escura);
+  }
+}
+
+/* Botão branco (usado sobre fundo roxo) */
+.botao-escuro {
+  color: var(--cor-principal-escura);
+  background: #fff;
+  border-color: #fff;
+
+  &:hover {
+    color: var(--cor-principal-escura);
+    background: #efe9fd;
+    border-color: #efe9fd;
+  }
+}

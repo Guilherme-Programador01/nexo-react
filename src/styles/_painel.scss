@@ -1,0 +1,156 @@
+/* Parte comum dos painéis (candidato e empresa). */
+.painel-topo {
+  padding: 28px 24px;
+  color: #fff;
+
+  p,
+  h1 {
+    margin: 0 0 8px;
+    color: #fff;
+  }
+
+  .etiqueta {
+    color: var(--cor-texto);
+    background: var(--cor-campo);
+  }
+}
+
+.cor-candidato {
+  background: var(--cor-principal);
+}
+
+.cor-empresa {
+  background: var(--cor-verde);
+}
+
+.painel-conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+
+.topo-lista,
+.titulo-acao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
+/* Abas do painel do candidato */
+.abas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid var(--cor-borda);
+
+  button {
+    padding: 10px 14px;
+    color: var(--cor-texto-suave);
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+
+    &:hover {
+      color: var(--cor-principal-escura);
+    }
+  }
+
+  .ativa {
+    color: var(--cor-principal-escura);
+    border-bottom-color: var(--cor-principal);
+  }
+}
+
+/* Mensagem de resposta (ex.: candidatura registrada) */
+.mensagem {
+  margin: 0;
+  padding: 10px 12px;
+  color: var(--cor-verde-escura);
+  background: var(--cor-verde-clara);
+  border-radius: var(--raio-pequeno);
+}
+
+/* Vagas dentro do painel: uma por linha */
+.painel-conteudo .lista-vagas {
+  grid-template-columns: 1fr;
+}
+
+.painel-conteudo .vaga {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  h3 {
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 0 0 4px;
+  }
+}
+
+.botoes-vaga {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  button {
+    padding: 8px 14px;
+    color: #fff;
+    background: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
+    border-radius: 8px;
+    font-weight: 600;
+
+    &:hover {
+      background: var(--cor-principal-escura);
+    }
+  }
+
+  .botao-secundario {
+    color: var(--cor-texto);
+    background: var(--cor-campo);
+    border-color: var(--cor-borda);
+
+    &:hover {
+      background: var(--cor-campo);
+    }
+  }
+
+  .botao-perigo {
+    color: var(--cor-erro);
+    background: var(--cor-campo);
+    border-color: rgba(180, 35, 24, 0.35);
+
+    &:hover {
+      background: var(--cor-erro-fundo);
+    }
+  }
+}
+
+.salario {
+  color: var(--cor-destaque);
+  font-weight: 700;
+}
+
+@media (max-width: 850px) {
+  .painel-topo {
+    padding: 22px 16px;
+  }
+
+  .painel-conteudo {
+    padding: 16px;
+  }
+}

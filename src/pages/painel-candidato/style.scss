@@ -1,0 +1,55 @@
+/* Painel do candidato. A base dos painéis está em styles/_painel.scss. */
+
+/* Formulário do currículo (fica alinhado à esquerda, não centralizado) */
+.painel-conteudo .formulario {
+  max-width: 640px;
+  margin: 0;
+  box-shadow: none;
+}
+
+.info-vaga span {
+  color: var(--cor-texto-suave);
+  font-size: 13px;
+}
+
+/* Candidaturas feitas */
+.candidatura {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--cor-borda);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 17px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.status {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 9px;
+  color: var(--cor-principal-escura);
+  background: var(--cor-principal-clara);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.candidatura .entrevista {
+  margin-top: 6px;
+  color: var(--cor-destaque);
+  font-size: 14px;
+  font-weight: 600;
+}

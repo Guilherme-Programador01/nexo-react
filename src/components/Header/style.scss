@@ -1,0 +1,166 @@
+.cabecalho {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid #eee8f4;
+  box-shadow: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 82px;
+  padding: 10px 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 170px;
+  }
+}
+
+.logo-completa {
+  display: block;
+  width: 158px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  a {
+    padding: 9px 0;
+    font-size: 14px;
+    font-weight: 650;
+    color: var(--cor-texto-suave);
+    transition: color 0.2s;
+
+    &:hover,
+    &.active {
+      color: var(--cor-principal);
+    }
+
+    &.active {
+      border-bottom: 2px solid var(--cor-principal);
+    }
+  }
+}
+
+.menu-acoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    gap: 14px;
+
+    .logo {
+      flex-basis: 130px;
+    }
+  }
+
+  .logo-completa {
+    width: 130px;
+  }
+
+  .navegacao {
+    gap: 15px;
+
+    a {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .menu {
+    flex-wrap: wrap;
+    min-height: 70px;
+    padding: 9px 16px;
+  }
+
+  .menu-mobile {
+    display: block;
+    margin-left: auto;
+    padding: 4px 11px;
+    font-size: 20px;
+    color: var(--cor-texto);
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 9px;
+  }
+
+  .navegacao {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 12px;
+    left: 12px;
+    display: none;
+    align-items: stretch;
+    padding: 12px 14px 16px;
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+    box-shadow: none;
+
+    &.aberto {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    a {
+      padding: 10px 12px;
+
+      &.active {
+        background: var(--cor-principal-clara);
+        border-radius: 9px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .menu-acoes {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 8px;
+
+    .logo {
+      flex-basis: 112px;
+    }
+  }
+
+  .logo-completa {
+    width: 112px;
+  }
+
+  .menu-acoes {
+    .botao-claro {
+      display: none;
+    }
+
+    .botao {
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+  }
+}

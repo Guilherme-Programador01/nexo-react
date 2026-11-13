@@ -1,0 +1,70 @@
+/* Painel da empresa. A base dos painéis está em styles/_painel.scss. */
+.secao-candidatos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lista-candidatos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cartao-candidato {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .dados-candidato {
+    flex: 1 1 260px;
+    align-items: flex-start;
+  }
+
+  small {
+    color: var(--cor-texto-suave);
+  }
+
+  .email {
+    margin: 2px 0 0;
+    font-size: 13px;
+  }
+}
+
+.acoes-candidato {
+  display: flex;
+  flex: 1 1 260px;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 340px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--cor-texto);
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+.info-vaga span {
+  color: var(--cor-texto-suave);
+  font-size: 13px;
+}
+
+.sair {
+  align-self: flex-start;
+  padding: 9px 16px;
+  color: var(--cor-erro);
+  background: var(--cor-campo);
+  border: 1px solid rgba(180, 35, 24, 0.35);
+  border-radius: 8px;
+  font-weight: 600;
+
+  &:hover {
+    background: var(--cor-erro-fundo);
+  }
+}

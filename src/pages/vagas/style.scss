@@ -1,0 +1,12 @@
+.filtros-vaga {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 22px;
+  padding: 17px; background: #fff; border: 1px solid var(--cor-borda); border-radius: 12px; box-shadow: none;
+  select { min-height: 44px; min-width: 170px; padding: 0 12px; color: var(--cor-texto); background: #fff; border: 1px solid var(--cor-borda-forte); border-radius: 8px; }
+}
+.campo-pesquisa { display: flex; align-items: center; flex: 1 1 260px; min-height: 44px; padding-left: 12px; color: var(--cor-texto-suave); background: #fff; border: 1px solid var(--cor-borda-forte); border-radius: 8px;
+  input { flex: 1; min-height: 40px; border: 0; outline: 0; }
+}
+.linha-resultados { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; color: var(--cor-texto); }
+.aviso-demo-vagas { color: #87621d; font-size: 12px; }
+.lista-vagas { gap: 16px; }
+@media (max-width: 650px) { .filtros-vaga { flex-direction: column; align-items: stretch; select, .campo-pesquisa { width: 100%; } } }

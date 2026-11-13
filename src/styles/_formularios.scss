@@ -1,0 +1,150 @@
+/* Campos, formulários e mensagens de erro/aviso. */
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  color: var(--cor-texto);
+  background: var(--cor-campo);
+  border: 1px solid var(--cor-borda-forte);
+  border-radius: var(--raio-pequeno);
+
+  &::placeholder {
+    color: #8a869c;
+  }
+
+  &:focus {
+    outline: 3px solid rgba(109, 40, 217, 0.25);
+    border-color: var(--cor-principal);
+  }
+
+  &[readonly] {
+    color: var(--cor-texto-suave);
+    background: #f1f0f6;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Rótulo + campo (um embaixo do outro) */
+.formulario label,
+.formulario-grande label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--cor-texto);
+  font-weight: 600;
+}
+
+/* Cartão de formulário pequeno: login e cadastro */
+.pagina-acesso {
+  padding: 40px 16px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 28px;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: none;
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 28px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Cartão de formulário grande: publicar vaga */
+.formulario-grande {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 28px;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: none;
+}
+
+.link-ajuda {
+  text-align: center;
+}
+
+/* Mensagens */
+.erro {
+  padding: 10px 12px;
+  color: var(--cor-erro);
+  background: var(--cor-erro-fundo);
+  border: 1px solid rgba(180, 35, 24, 0.35);
+  border-radius: var(--raio-pequeno);
+}
+
+.aviso,
+.nota,
+.texto-claro {
+  color: var(--cor-texto-suave);
+  font-size: 13px;
+}
+
+/* Barras de filtro (vagas e currículos) */
+.filtros,
+.filtros-vaga {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  input {
+    flex: 1 1 240px;
+    width: auto;
+  }
+
+  select {
+    flex: 0 1 220px;
+    width: auto;
+  }
+}
+
+/* Escolha entre candidato e empresa (cadastro) */
+.escolha {
+  display: flex;
+  gap: 8px;
+
+  button {
+    flex: 1;
+    padding: 10px;
+    color: var(--cor-texto);
+    background: var(--cor-campo);
+    border: 1px solid var(--cor-borda-forte);
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .selecionado {
+    color: #fff;
+    background: var(--cor-principal);
+    border-color: var(--cor-principal);
+  }
+}
+
+@media (max-width: 560px) {
+  .formulario,
+  .formulario-grande {
+    padding: 20px;
+  }
+}

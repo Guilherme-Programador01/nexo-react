@@ -1,0 +1,23 @@
+/* Identidade visual Nexo: símbolo próprio e nome em tipografia forte. */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--cor-texto);
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1;
+  &:hover { color: var(--cor-texto); }
+}
+.logo-icone {
+  display: block;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  
+  object-fit: contain;
+}
+.logo-nome { color: var(--cor-texto); font-weight: 800; }
+.logo-destaque { color: var(--cor-principal); }

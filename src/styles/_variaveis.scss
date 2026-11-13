@@ -1,0 +1,46 @@
+/* Identidade visual Nexo: roxo (principal), verde (ação/sucesso) e fundos claros.
+   Para mudar o visual do site inteiro, basta mexer neste arquivo. */
+:root {
+  /* Roxo = cor principal / destaque */
+  --cor-principal: #6b35c9;
+  --cor-principal-escura: #5126a8;
+  --cor-principal-clara: rgba(107, 53, 201, 0.09);
+  --cor-destaque: #6b35c9;
+  --cor-destaque-clara: rgba(107, 53, 201, 0.09);
+
+  /* Verde = cor secundária (sucesso e ações positivas) */
+  --cor-verde: #168653;
+  --cor-verde-escura: #126b42;
+  --cor-verde-clara: rgba(22, 134, 83, 0.10);
+
+  /* Fundos claros e textos */
+  --cor-fundo: #faf9fc;
+  --cor-superficie: #ffffff;
+  --cor-campo: #ffffff;
+  --cor-texto: #1f1b2e;
+  --cor-texto-suave: #5b5870;
+  --cor-borda: #e8e4ee;
+  --cor-borda-forte: #cfcae0;
+  --cor-creme: #f0edf7; /* nome antigo: agora é um lilás bem suave */
+  --cor-creme-texto: #1f1b2e;
+
+  /* Mensagens */
+  --cor-erro: #b42318;
+  --cor-erro-fundo: #fef3f2;
+  --cor-aviso: #92400e;
+  --cor-aviso-fundo: #fffbeb;
+
+  /* Tons escuros (página inicial, cabeçalho e rodapé) */
+  --cor-noite: #0d0817;
+  --cor-noite-2: #140b24;
+  --cor-lilas: #b58aff;
+  --cor-texto-noite: rgba(255, 255, 255, 0.72);
+
+  --largura-menu: 235px;
+  --largura-conteudo: 1160px;
+  --raio: 13px;
+  --raio-pequeno: 8px;
+  --sombra: none;
+  --sombra-forte: none;
+  --fonte: "DM Sans", Inter, "Segoe UI", Arial, sans-serif;
+}

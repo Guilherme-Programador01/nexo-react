@@ -1,0 +1,91 @@
+/* Reset e estilos dos elementos básicos do HTML. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--cor-fundo);
+}
+
+body {
+  margin: 0;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  font-family: var(--fonte);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  color: var(--cor-texto);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+h2 {
+  font-size: clamp(21px, 2vw, 28px);
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  color: var(--cor-texto-suave);
+}
+
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cor-principal-escura);
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Mostra o foco do teclado em tudo que dá para clicar. */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(109, 40, 217, 0.5);
+  outline-offset: 2px;
+}
+
+/* Ícones SVG (componente Icone) */
+.icone {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}

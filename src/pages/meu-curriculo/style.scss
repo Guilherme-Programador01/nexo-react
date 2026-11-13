@@ -1,0 +1,35 @@
+.curriculo-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(280px, .85fr); align-items: start; gap: 20px; padding-top: 28px; padding-bottom: 48px; }
+.formulario-curriculo, .envio-curriculo { padding: 24px; background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: 13px; box-shadow: none; }
+.titulo-curriculo { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 22px;
+  > span { display: flex; align-items: center; justify-content: center; flex: 0 0 38px; width: 38px; height: 38px; font-weight: 800; color: var(--cor-principal-escura); background: var(--cor-principal-clara); border-radius: 8px; }
+  h2 { margin: 0 0 4px; font-size: 20px; } p { margin: 0; font-size: 13px; color: var(--cor-texto-suave); }
+}
+.campos-curriculo { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;
+  label { display: flex; flex-direction: column; gap: 7px; font-size: 13px; font-weight: 650; }
+  input, textarea { width: 100%; } .campo-largo { grid-column: 1 / -1; }
+}
+.zona-arquivo { display: flex; flex-direction: column; gap: 8px; padding: 22px; text-align: center; cursor: pointer; background: #faf9fc; border: 1px dashed var(--cor-borda-forte); border-radius: 10px;
+  strong { color: var(--cor-texto); } span { font-size: 12px; color: var(--cor-texto-suave); } input { width: 100%; margin-top: 8px; font-size: 12px; }
+}
+.envio-curriculo form > button { width: 100%; margin-top: 15px; }
+.arquivo-selecionado, .mensagem-curriculo { padding: 10px 12px; font-size: 13px; color: var(--cor-verde-escura); background: var(--cor-verde-clara); border-radius: 7px; }
+.curriculo-enviado, .dica-curriculo { margin-top: 18px; padding: 15px; font-size: 13px; background: var(--cor-fundo); border-radius: 9px;
+  p { margin: 6px 0; color: var(--cor-texto-suave); } a { font-weight: 650; } small { color: var(--cor-texto-suave); }
+}
+.previa-curriculo { margin-top: 26px; padding: 22px; background: #fff; border: 1px solid var(--cor-borda); border-radius: 11px; }
+.previa-cabecalho { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-bottom: 13px; border-bottom: 1px solid var(--cor-borda);
+  span { color: var(--cor-principal); font-size: 10px; font-weight: 800; letter-spacing: 1px; } small { color: var(--cor-texto-suave); font-size: 11px; }
+}
+.previa-identificacao { display: flex; align-items: center; gap: 13px; padding: 18px 0;
+  h2 { margin: 0 0 3px; font-size: 20px; } p { margin: 0; color: var(--cor-principal); font-size: 13px; font-weight: 650; } small { color: var(--cor-texto-suave); font-size: 11px; }
+}
+.previa-avatar { display: grid; place-items: center; width: 48px; height: 48px; flex: 0 0 48px; color: #fff; background: var(--cor-principal); border-radius: 50%; font-size: 19px; font-weight: 800; }
+.previa-bloco { padding: 12px 0; border-top: 1px solid #f0edf4;
+  h3 { margin: 0 0 6px; font-size: 13px; color: var(--cor-texto); } p { margin: 0; color: var(--cor-texto-suave); font-size: 12px; white-space: pre-line; line-height: 1.6; }
+}
+.previa-habilidades { display: flex; flex-wrap: wrap; gap: 6px;
+  span { padding: 5px 8px; color: var(--cor-principal-escura); background: var(--cor-principal-clara); border-radius: 5px; font-size: 11px; }
+  small { color: var(--cor-texto-suave); }
+}
+@media (max-width: 850px) { .curriculo-layout { grid-template-columns: 1fr; } }
+@media (max-width: 540px) { .campos-curriculo { grid-template-columns: 1fr; .campo-largo { grid-column: auto; } } .formulario-curriculo, .envio-curriculo { padding: 18px; } .previa-curriculo { padding: 16px; } }

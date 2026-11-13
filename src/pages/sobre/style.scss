@@ -1,0 +1,12 @@
+.sobre-colunas { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; gap: 30px; }
+.sobre-cartao { padding: 27px; background: #fff; border: 1px solid var(--cor-borda); border-left: 4px solid var(--cor-principal); border-radius: 12px; box-shadow: none;
+  h2 { margin: 13px 0 10px; font-size: 25px; } p { margin: 0; line-height: 1.75; }
+}
+.sobre-numero { color: var(--cor-principal); font-size: 10px; font-weight: 800; letter-spacing: 1.2px; }
+.sobre-lista { display: flex; flex-direction: column; gap: 20px;
+  > div { display: flex; gap: 14px; padding-bottom: 17px; border-bottom: 1px solid var(--cor-borda); }
+  > div:last-child { border-bottom: 0; }
+  div span { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 38px; height: 38px; color: var(--cor-principal-escura); background: var(--cor-principal-clara); border-radius: 8px; font-weight: 800; font-size: 12px; }
+  h3 { margin: 0 0 4px; font-size: 17px; } p { margin: 0; line-height: 1.6; }
+}
+@media (max-width: 760px) { .sobre-colunas { grid-template-columns: 1fr; } }
